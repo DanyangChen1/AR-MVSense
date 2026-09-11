@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "platform": "macOS-13.4-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch_version": "2.11.0",
+    "torch_threads": 4,
+    "input_shape": [
+      1,
+      128,
+      3,
+      128,
+      128
+    ],
+    "warmup": 3,
+    "iterations": 10,
+    "operation_count_note": "Paper baselines TSCAN/DeepPhys match FVCore when one fused multiply-add counts as one; paper_comparable_known_fma_ops follows that convention but excludes listed unsupported operators"
+  },
+  "models": {
+    "rPPGViT": {
+      "device": "cpu",
+      "parameters": 1107014,
+      "clip_latency_ms_median": 300.41847898974083,
+      "clip_latency_ms_mean": 297.78302520280704,
+      "per_frame_ms_median": 2.3470193671073503,
+      "fvcore_known_fma_ops": 18923788800,
+      "paper_comparable_known_fma_ops": 18923788800,
+      "mul_add_as_two_ops_lower_bound": 37847577600,
+      "unsupported_operators": {
+        "aten::gelu": 9,
+        "aten::mul": 41,
+        "aten::avg_pool2d": 3,
+        "aten::div": 7,
+        "aten::scaled_dot_product_attention": 7,
+        "aten::add": 22,
+        "aten::mean": 1,
+        "aten::rsub": 4,
+        "aten::pad": 8,
+        "aten::masked_fill_": 4,
+        "aten::unflatten": 4,
+        "aten::upsample_linear1d": 1
+      }
+    },
+    "Light-rPPGViT-training": {
+      "device": "cpu",
+      "parameters": 699715,
+      "clip_latency_ms_median": 669.6511245099828,
+      "clip_latency_ms_mean": 687.7677624113858,
+      "per_frame_ms_median": 5.23164941023424,
+      "fvcore_known_fma_ops": 6901415518,
+      "paper_comparable_known_fma_ops": 6901415518,
+      "mul_add_as_two_ops_lower_bound": 13802831036,
+      "unsupported_operators": {
+        "aten::gelu": 20,
+        "aten::mul": 18,
+        "aten::add": 24,
+        "aten::mean": 19,
+        "aten::sigmoid": 7,
+        "aten::tanh": 4,
+        "aten::sub": 4,
+        "aten::upsample_linear1d": 1
+      }
+    },
+    "Light-rPPGViT-deploy": {
+      "device": "cpu",
+      "parameters": 696838,
+      "clip_latency_ms_median": 576.6726044821553,
+      "clip_latency_ms_mean": 582.8803167969454,
+      "per_frame_ms_median": 4.505254722516838,
+      "fvcore_known_fma_ops": 6780206686,
+      "paper_comparable_known_fma_ops": 6780206686,
+      "mul_add_as_two_ops_lower_bound": 13560413372,
+      "unsupported_operators": {
+        "aten::gelu": 20,
+        "aten::mul": 18,
+        "aten::mean": 19,
+        "aten::sigmoid": 7,
+        "aten::add": 18,
+        "aten::tanh": 4,
+        "aten::sub": 4,
+        "aten::upsample_linear1d": 1
+      }
+    }
+  }
+}

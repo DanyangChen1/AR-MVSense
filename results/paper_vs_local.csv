@@ -1,0 +1,78 @@
+table,dataset,model,metric,paper,local,delta_local_minus_paper,status,evidence,note
+accuracy,UBFC,TSCAN,MAE,1.36,3.02734375,1.66734375,measured,outputs/toolbox-results/ubfc/tscan/metrics.json,
+accuracy,UBFC,TSCAN,RMSE,2.65,5.149920653685629,2.499920653685629,measured,outputs/toolbox-results/ubfc/tscan/metrics.json,
+accuracy,UBFC,TSCAN,MAPE,1.27,3.1669283097854524,1.8969283097854523,measured,outputs/toolbox-results/ubfc/tscan/metrics.json,
+accuracy,UBFC,TSCAN,Pearson,0.95,0.9000011205369461,-0.049998879463053814,measured,outputs/toolbox-results/ubfc/tscan/metrics.json,
+accuracy,UBFC,PhysNet,MAE,0.97,,,pending,outputs/toolbox-results/ubfc/physnet/metrics.json,
+accuracy,UBFC,PhysNet,RMSE,2.92,,,pending,outputs/toolbox-results/ubfc/physnet/metrics.json,
+accuracy,UBFC,PhysNet,MAPE,0.92,,,pending,outputs/toolbox-results/ubfc/physnet/metrics.json,
+accuracy,UBFC,PhysNet,Pearson,0.95,,,pending,outputs/toolbox-results/ubfc/physnet/metrics.json,
+accuracy,UBFC,DeepPhys,MAE,0.39,42.28515625,41.89515625,measured,outputs/toolbox-results/ubfc/deepphys/metrics.json,
+accuracy,UBFC,DeepPhys,RMSE,1.17,44.818473896564036,43.648473896564035,measured,outputs/toolbox-results/ubfc/deepphys/metrics.json,
+accuracy,UBFC,DeepPhys,MAPE,0.37,43.05163067952702,42.681630679527025,measured,outputs/toolbox-results/ubfc/deepphys/metrics.json,
+accuracy,UBFC,DeepPhys,Pearson,0.98,-0.06593298779950559,-1.0459329877995056,measured,outputs/toolbox-results/ubfc/deepphys/metrics.json,
+accuracy,UBFC,PhysFormer,MAE,0.97,,,pending,outputs/toolbox-results/ubfc/physformer/metrics.json,
+accuracy,UBFC,PhysFormer,RMSE,2.92,,,pending,outputs/toolbox-results/ubfc/physformer/metrics.json,
+accuracy,UBFC,PhysFormer,MAPE,0.92,,,pending,outputs/toolbox-results/ubfc/physformer/metrics.json,
+accuracy,UBFC,PhysFormer,Pearson,0.95,,,pending,outputs/toolbox-results/ubfc/physformer/metrics.json,
+accuracy,UBFC,EfficientPhys,MAE,0.48,,,pending,outputs/toolbox-results/ubfc/efficientphys/metrics.json,
+accuracy,UBFC,EfficientPhys,RMSE,1.46,,,pending,outputs/toolbox-results/ubfc/efficientphys/metrics.json,
+accuracy,UBFC,EfficientPhys,MAPE,0.48,,,pending,outputs/toolbox-results/ubfc/efficientphys/metrics.json,
+accuracy,UBFC,EfficientPhys,Pearson,0.98,,,pending,outputs/toolbox-results/ubfc/efficientphys/metrics.json,
+accuracy,UBFC,rPPGViT,MAE,0.27,0.09765625,-0.17234375000000002,measured,outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/metrics.json,
+accuracy,UBFC,rPPGViT,RMSE,0.3,0.29296875,-0.007031249999999989,measured,outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/metrics.json,
+accuracy,UBFC,rPPGViT,MAPE,0.28,0.1277139208173691,-0.15228607918263093,measured,outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/metrics.json,
+accuracy,UBFC,rPPGViT,Pearson,0.99,0.9997783583578335,0.009778358357833472,measured,outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/metrics.json,
+accuracy,UBFC,Light-rPPGViT,MAE,0.46,0.29296875,-0.16703125000000002,measured,outputs/ubfc/light_rppgvit/trials/physical_batch4/metrics.json,
+accuracy,UBFC,Light-rPPGViT,RMSE,0.88,0.6550980402831416,-0.22490195971685845,measured,outputs/ubfc/light_rppgvit/trials/physical_batch4/metrics.json,
+accuracy,UBFC,Light-rPPGViT,MAPE,0.48,0.3243707546423445,-0.1556292453576555,measured,outputs/ubfc/light_rppgvit/trials/physical_batch4/metrics.json,
+accuracy,UBFC,Light-rPPGViT,Pearson,0.98,0.9981010542190807,0.018101054219080703,measured,outputs/ubfc/light_rppgvit/trials/physical_batch4/metrics.json,
+accuracy,MMPD,TSCAN,MAE,0.73,,,pending,outputs/toolbox-results/mmpd-mini/tscan/metrics.json,
+accuracy,MMPD,TSCAN,RMSE,1.64,,,pending,outputs/toolbox-results/mmpd-mini/tscan/metrics.json,
+accuracy,MMPD,TSCAN,MAPE,0.84,,,pending,outputs/toolbox-results/mmpd-mini/tscan/metrics.json,
+accuracy,MMPD,TSCAN,Pearson,0.99,,,pending,outputs/toolbox-results/mmpd-mini/tscan/metrics.json,
+accuracy,MMPD,PhysNet,MAE,1.24,,,pending,outputs/toolbox-results/mmpd-mini/physnet/metrics.json,
+accuracy,MMPD,PhysNet,RMSE,2.69,,,pending,outputs/toolbox-results/mmpd-mini/physnet/metrics.json,
+accuracy,MMPD,PhysNet,MAPE,1.49,,,pending,outputs/toolbox-results/mmpd-mini/physnet/metrics.json,
+accuracy,MMPD,PhysNet,Pearson,0.97,,,pending,outputs/toolbox-results/mmpd-mini/physnet/metrics.json,
+accuracy,MMPD,DeepPhys,MAE,9.96,,,pending,outputs/toolbox-results/mmpd-mini/deepphys/metrics.json,
+accuracy,MMPD,DeepPhys,RMSE,14.58,,,pending,outputs/toolbox-results/mmpd-mini/deepphys/metrics.json,
+accuracy,MMPD,DeepPhys,MAPE,13.06,,,pending,outputs/toolbox-results/mmpd-mini/deepphys/metrics.json,
+accuracy,MMPD,DeepPhys,Pearson,0.64,,,pending,outputs/toolbox-results/mmpd-mini/deepphys/metrics.json,
+accuracy,MMPD,PhysFormer,MAE,0.66,,,pending,outputs/toolbox-results/mmpd-mini/physformer/metrics.json,
+accuracy,MMPD,PhysFormer,RMSE,1.45,,,pending,outputs/toolbox-results/mmpd-mini/physformer/metrics.json,
+accuracy,MMPD,PhysFormer,MAPE,0.91,,,pending,outputs/toolbox-results/mmpd-mini/physformer/metrics.json,
+accuracy,MMPD,PhysFormer,Pearson,0.98,,,pending,outputs/toolbox-results/mmpd-mini/physformer/metrics.json,
+accuracy,MMPD,EfficientPhys,MAE,1.09,,,pending,outputs/toolbox-results/mmpd-mini/efficientphys/metrics.json,
+accuracy,MMPD,EfficientPhys,RMSE,2.13,,,pending,outputs/toolbox-results/mmpd-mini/efficientphys/metrics.json,
+accuracy,MMPD,EfficientPhys,MAPE,1.32,,,pending,outputs/toolbox-results/mmpd-mini/efficientphys/metrics.json,
+accuracy,MMPD,EfficientPhys,Pearson,0.98,,,pending,outputs/toolbox-results/mmpd-mini/efficientphys/metrics.json,
+accuracy,MMPD,rPPGViT,MAE,0.65,,,pending,outputs/mmpd-mini/rppgvit/metrics.json,
+accuracy,MMPD,rPPGViT,RMSE,1.52,,,pending,outputs/mmpd-mini/rppgvit/metrics.json,
+accuracy,MMPD,rPPGViT,MAPE,0.81,,,pending,outputs/mmpd-mini/rppgvit/metrics.json,
+accuracy,MMPD,rPPGViT,Pearson,0.99,,,pending,outputs/mmpd-mini/rppgvit/metrics.json,
+accuracy,MMPD,Light-rPPGViT,MAE,0.68,,,pending,outputs/mmpd-mini/light_rppgvit/metrics.json,
+accuracy,MMPD,Light-rPPGViT,RMSE,1.55,,,pending,outputs/mmpd-mini/light_rppgvit/metrics.json,
+accuracy,MMPD,Light-rPPGViT,MAPE,1.31,,,pending,outputs/mmpd-mini/light_rppgvit/metrics.json,
+accuracy,MMPD,Light-rPPGViT,Pearson,0.98,,,pending,outputs/mmpd-mini/light_rppgvit/metrics.json,
+efficiency,,TSCAN,Params_M,2.23,2.228643,-0.0013570000000000526,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,
+efficiency,,TSCAN,FLOPs_G,29.07,29.06198016,-0.008019839999999334,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,TSCAN,Latency_ms,78.0,3.6313243084199107,-74.3686756915801,context_mismatch,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,PhysNet,Params_M,0.81,0.768577,-0.0414230000000001,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,
+efficiency,,PhysNet,FLOPs_G,17.72,17.620221952,-0.09977804799999745,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,PhysNet,Latency_ms,42.0,2.3508359377046872,-39.64916406229531,context_mismatch,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,DeepPhys,Params_M,2.23,2.228643,-0.0013570000000000526,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,
+efficiency,,DeepPhys,FLOPs_G,29.07,29.06198016,-0.008019839999999334,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,DeepPhys,Latency_ms,55.0,3.51762988293558,-51.48237011706442,context_mismatch,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,PhysFormer,Params_M,7.38,7.380865,0.0008650000000001157,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,
+efficiency,,PhysFormer,FLOPs_G,53.69,41.019807744,-12.670192256,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,PhysFormer,Latency_ms,96.0,7.389656250325061,-88.61034374967494,context_mismatch,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,EfficientPhys,Params_M,2.16,2.163081,0.0030809999999998894,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,
+efficiency,,EfficientPhys,FLOPs_G,15.63,14.683693056,-0.9463069440000016,measured,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,EfficientPhys,Latency_ms,55.0,2.107651741728963,-52.892348258271035,context_mismatch,outputs/benchmarks/toolbox_baselines_apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,rPPGViT,Params_M,1.12,1.107014,-0.012986000000000164,measured,outputs/benchmarks/apple_m2_cpu.json,
+efficiency,,rPPGViT,FLOPs_G,20.12,18.9237888,-1.1962112000000005,measured,outputs/benchmarks/apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,rPPGViT,Latency_ms,40.0,2.3470193671073503,-37.65298063289265,context_mismatch,outputs/benchmarks/apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency
+efficiency,,Light-rPPGViT,Params_M,0.7,0.696838,-0.003161999999999998,measured,outputs/benchmarks/apple_m2_cpu.json,
+efficiency,,Light-rPPGViT,FLOPs_G,6.93,6.780206686,-0.14979331400000007,measured,outputs/benchmarks/apple_m2_cpu.json,paper-compatible one-FMA convention; lower bound because FVCore lists unsupported operators
+efficiency,,Light-rPPGViT,Latency_ms,34.0,4.505254722516838,-29.49474527748316,context_mismatch,outputs/benchmarks/apple_m2_cpu.json,Apple M2 CPU throughput per input frame; paper uses Snapdragon XR2 per-frame latency

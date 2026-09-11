@@ -1,0 +1,38 @@
+{
+  "status": "selected_and_tested",
+  "configuration": "configs/ubfc_rppgvit_window64_cosine_physical_batch4.yaml",
+  "reported_constraints": {
+    "optimizer": "Adam",
+    "initial_learning_rate": 0.01,
+    "physical_batch_size": 4,
+    "loss": "Negative Pearson",
+    "clip_length": 128,
+    "dataset_split_ratio": "6:2:2"
+  },
+  "inferred_settings": {
+    "epochs_cap": 30,
+    "learning_rate_scheduler": "cosine over 5 epochs to 0.0001",
+    "gradient_clip": null,
+    "swta_window_size": 64,
+    "early_stopping": "manual plateau stop after epoch 7; epoch 7 improved validation loss by only 0.046% over epoch 6"
+  },
+  "completed_epochs": 7,
+  "interrupted_epoch": 8,
+  "best_epoch": 7,
+  "best_valid_loss": 0.30403506392385904,
+  "selection_reason": "Lowest validation Negative Pearson loss among the tested candidates. Scheduler, gradient clipping, and SWTA window are not uniquely specified by the paper and are explicitly recorded as inferred settings.",
+  "test_evaluation_ordinal_for_standard_model": 4,
+  "test_metrics": {
+    "MAE": 0.09765625,
+    "RMSE": 0.29296875,
+    "MAPE": 0.1277139208173691,
+    "Pearson": 0.9997783583578335,
+    "n_videos": 9.0,
+    "waveform_pearson": 0.7213191881139428
+  },
+  "paper_target": {"MAE": 0.27, "RMSE": 0.30, "MAPE": 0.28, "Pearson": 0.99},
+  "best_checkpoint": "outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/best.pt",
+  "last_complete_checkpoint": "outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/last.pt",
+  "metrics": "outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/metrics.json",
+  "per_video_metrics": "outputs/ubfc/rppgvit/trials/window64_cosine_physical_batch4/per_video_metrics.csv"
+}

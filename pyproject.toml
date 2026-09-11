@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "light-rppg-reproduction"
+version = "0.1.0"
+description = "Evidence-traceable reproduction of rPPGViT and Light-rPPGViT"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "opencv-python-headless>=4.9,<5",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "h5py>=3.10",
+  "PyYAML>=6.0",
+  "tqdm>=4.66",
+  "pandas>=2.1",
+  "requests>=2.31",
+  "gdown>=5.2",
+  "kagglehub>=1.0.2",
+  "fvcore>=0.1.5",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+testpaths = ["tests"]

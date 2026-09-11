@@ -1,0 +1,15 @@
+{
+  "base_config": "configs/mmpd_light_rppgvit.yaml",
+  "output_root": "outputs/mmpd-mini/light_rppgvit",
+  "paper_dataset": "MMPD",
+  "paper_model": "Light-rPPGViT",
+  "dataset_variant": "mini-MMPD",
+  "trials": [
+    {"name": "paper_constrained_default", "overrides": {}, "selection_eligible": true, "reason": "Primary transparent completion on mini-MMPD"},
+    {"name": "zero_tail", "overrides": {"data.diff_alignment": "zero_tail"}, "selection_eligible": true, "reason": "Difference-alignment sensitivity"},
+    {"name": "pconv_one_eighth", "overrides": {"model.pconv_ratio": 0.125}, "selection_eligible": true, "reason": "One-factor partial-convolution ratio sensitivity"},
+    {"name": "pconv_one_half", "overrides": {"model.pconv_ratio": 0.5}, "selection_eligible": true, "reason": "One-factor partial-convolution ratio sensitivity"},
+    {"name": "relative_difference_reference", "overrides": {"data.frame_diff_mode": "relative"}, "selection_eligible": false, "reason": "Sensitivity only: reference-paper convention"},
+    {"name": "seeded_random_split_sensitivity", "overrides": {"data.split_mode": "seeded_random", "data.split_seed": 42}, "selection_eligible": false, "reason": "Sensitivity only: different subject membership"}
+  ]
+}

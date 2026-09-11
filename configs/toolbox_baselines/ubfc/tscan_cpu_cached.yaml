@@ -1,0 +1,14 @@
+BASE:
+- tscan.yaml
+DEVICE: cpu
+TRAIN:
+  DATA:
+    DO_PREPROCESS: false
+VALID:
+  DATA:
+    DO_PREPROCESS: false
+TEST:
+  DATA:
+    DO_PREPROCESS: false
+MODEL:
+  RESUME: ''

@@ -1,0 +1,37 @@
+experiment:
+  name: ubfc_rppgvit_physical_batch4
+  output_dir: outputs/ubfc/rppgvit/trials/physical_batch4
+  seed: 42
+data:
+  dataset: UBFC-rPPG
+  cache_path: data/cache/UBFC-rPPG-128
+  fps: 30
+  image_size: 128
+  clip_length: 128
+  clip_stride: 128
+  label_diff: true
+  frame_diff_mode: simple
+  diff_alignment: extra_frame
+  split_mode: numeric
+  split_seed: 42
+  num_workers: 0
+model:
+  name: rppgvit
+  dim: 124
+  heads: 4
+  cca_depth: 3
+  swta_depth: 4
+  window_size: 16
+  spatial_tokens: 8
+  dropout: 0.3
+train:
+  epochs: 30
+  batch_size: 4
+  micro_batch_size: 4
+  lr: 0.01
+  weight_decay: 0.0
+  device: auto
+  grad_clip: 5.0
+evaluation:
+  low_hz: 0.75
+  high_hz: 2.5

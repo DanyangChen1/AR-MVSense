@@ -1,0 +1,19 @@
+{
+  "base_config": "configs/ubfc_rppgvit.yaml",
+  "output_root": "outputs/ubfc/rppgvit",
+  "paper_dataset": "UBFC",
+  "paper_model": "rPPGViT",
+  "trials": [
+    {"name": "paper_constrained_default", "overrides": {}, "selection_eligible": true, "reason": "Primary transparent completion of omitted settings"},
+    {"name": "physical_batch4", "overrides": {"train.micro_batch_size": 4}, "selection_eligible": true, "reason": "Execution-fidelity control: restores the paper-reported physical batch size because the model contains BatchNorm3d"},
+    {"name": "physical_batch4_no_grad_clip", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null}, "selection_eligible": true, "reason": "Single-factor control removing the locally inferred global gradient clipping that is not disclosed by the paper"},
+    {"name": "figure2_physical_batch4", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null, "model.cca_variant": "figure2"}, "selection_eligible": true, "reason": "Architecture-fidelity correction: implements the explicit CCA -> Add&Norm -> S-T feed-forward -> Add&Norm order shown in main-paper Fig. 2"},
+    {"name": "zero_tail", "overrides": {"data.diff_alignment": "zero_tail"}, "selection_eligible": true, "reason": "Tests the reference-toolbox convention of preserving clip length with a zero tail"},
+    {"name": "window8", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null, "model.window_size": 8}, "selection_eligible": true, "reason": "One-factor SWTA temporal-window sensitivity after restoring physical batch 4 and removing undisclosed gradient clipping"},
+    {"name": "window32", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null, "model.window_size": 32}, "selection_eligible": true, "reason": "One-factor SWTA temporal-window sensitivity after restoring physical batch 4 and removing undisclosed gradient clipping"},
+    {"name": "window64", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null, "model.window_size": 64}, "selection_eligible": true, "reason": "One-factor full encoded-sequence attention sensitivity after restoring physical batch 4 and removing undisclosed gradient clipping; the main paper does not disclose W_t"},
+    {"name": "window64_cosine", "overrides": {"train.micro_batch_size": 4, "train.grad_clip": null, "model.window_size": 64, "train.scheduler.name": "cosine", "train.scheduler.decay_epochs": 5, "train.scheduler.min_lr": 0.0001}, "selection_eligible": true, "reason": "Single-factor inferred schedule after fixed 1e-2 validation oscillation; preserves the reported initial learning rate and the selected execution controls"},
+    {"name": "relative_difference_reference", "overrides": {"data.frame_diff_mode": "relative"}, "selection_eligible": false, "reason": "Sensitivity only: PhysMViT/toolbox convention differs from the main paper equation"},
+    {"name": "seeded_random_split_sensitivity", "overrides": {"data.split_mode": "seeded_random", "data.split_seed": 42}, "selection_eligible": false, "reason": "Sensitivity only: changes dataset membership and cannot be selected against another validation set"}
+  ]
+}

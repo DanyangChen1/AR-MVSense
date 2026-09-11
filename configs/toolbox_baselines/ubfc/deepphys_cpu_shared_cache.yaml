@@ -1,0 +1,21 @@
+BASE:
+- deepphys.yaml
+DEVICE: cpu
+TRAIN:
+  DATA:
+    DO_PREPROCESS: false
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/tscan
+    EXP_DATA_NAME: UBFC-rPPG_TSCAN_within_622
+    FILE_LIST_PATH: ./data/cache/rppg-toolbox/ubfc/tscan/DataFileLists/UBFC-rPPG_TSCAN_within_622_0.0_0.6.csv
+VALID:
+  DATA:
+    DO_PREPROCESS: false
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/tscan
+    EXP_DATA_NAME: UBFC-rPPG_TSCAN_within_622
+    FILE_LIST_PATH: ./data/cache/rppg-toolbox/ubfc/tscan/DataFileLists/UBFC-rPPG_TSCAN_within_622_0.6_0.8.csv
+TEST:
+  DATA:
+    DO_PREPROCESS: false
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/tscan
+    EXP_DATA_NAME: UBFC-rPPG_TSCAN_within_622
+    FILE_LIST_PATH: ./data/cache/rppg-toolbox/ubfc/tscan/DataFileLists/UBFC-rPPG_TSCAN_within_622_0.8_1.0.csv

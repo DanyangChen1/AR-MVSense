@@ -1,0 +1,5 @@
+BASE:
+- tscan_cpu_cached.yaml
+TOOLBOX_MODE: only_test
+INFERENCE:
+  MODEL_PATH: weights/tscan/ubfc_epoch16.pth

@@ -1,0 +1,52 @@
+[
+  {
+    "dataset": "ubfc",
+    "model": "TSCAN",
+    "config": "./configs/toolbox_baselines/ubfc/tscan.yaml"
+  },
+  {
+    "dataset": "ubfc",
+    "model": "PhysNet",
+    "config": "./configs/toolbox_baselines/ubfc/physnet.yaml"
+  },
+  {
+    "dataset": "ubfc",
+    "model": "DeepPhys",
+    "config": "./configs/toolbox_baselines/ubfc/deepphys.yaml"
+  },
+  {
+    "dataset": "ubfc",
+    "model": "PhysFormer",
+    "config": "./configs/toolbox_baselines/ubfc/physformer.yaml"
+  },
+  {
+    "dataset": "ubfc",
+    "model": "EfficientPhys",
+    "config": "./configs/toolbox_baselines/ubfc/efficientphys.yaml"
+  },
+  {
+    "dataset": "mmpd-mini",
+    "model": "TSCAN",
+    "config": "./configs/toolbox_baselines/mmpd-mini/tscan.yaml"
+  },
+  {
+    "dataset": "mmpd-mini",
+    "model": "PhysNet",
+    "config": "./configs/toolbox_baselines/mmpd-mini/physnet.yaml"
+  },
+  {
+    "dataset": "mmpd-mini",
+    "model": "DeepPhys",
+    "config": "./configs/toolbox_baselines/mmpd-mini/deepphys.yaml"
+  },
+  {
+    "dataset": "mmpd-mini",
+    "model": "PhysFormer",
+    "config": "./configs/toolbox_baselines/mmpd-mini/physformer.yaml"
+  },
+  {
+    "dataset": "mmpd-mini",
+    "model": "EfficientPhys",
+    "config": "./configs/toolbox_baselines/mmpd-mini/efficientphys.yaml"
+  }
+]

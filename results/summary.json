@@ -1,0 +1,33 @@
+{
+  "scope": "approximate reproduction",
+  "dataset": "UBFC-rPPG",
+  "models": {
+    "Light-rPPGViT UBFC best": {
+      "MAE": 0.29296875,
+      "RMSE": 0.6550980402831416,
+      "MAPE": 0.3243707546423445,
+      "Pearson": 0.9981010542190807,
+      "n_videos": 9.0,
+      "waveform_pearson": 0.6757371464587416
+    },
+    "rPPGViT UBFC best": {
+      "MAE": 0.09765625,
+      "RMSE": 0.29296875,
+      "MAPE": 0.1277139208173691,
+      "Pearson": 0.9997783583578335,
+      "n_videos": 9.0,
+      "waveform_pearson": 0.7213191881139428
+    },
+    "TSCAN UBFC epoch 16": {
+      "MAE": 3.02734375,
+      "RMSE": 5.149920653685629,
+      "MAPE": 3.1669283097854524,
+      "Pearson": 0.9000011205369461,
+      "n_windows": 9,
+      "evaluation_method": "rPPG-Toolbox whole-video FFT",
+      "label_type": "DiffNormalized",
+      "fs": 30,
+      "source_prediction_pickle": "outputs/toolbox/ubfc/TSCAN/UBFC-rPPG_TSCAN_within_622/saved_test_outputs/ubfc_ubfc_ubfc_TSCAN_Epoch16_UBFC-rPPG_outputs.pickle"
+    }
+  }
+}

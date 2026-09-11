@@ -1,0 +1,125 @@
+BASE:
+- ''
+TOOLBOX_MODE: train_and_test
+TRAIN:
+  BATCH_SIZE: 4
+  EPOCHS: 30
+  LR: 9e-3
+  MODEL_FILE_NAME: ubfc_ubfc_ubfc_DeepPhys
+  PLOT_LOSSES_AND_LR: true
+  DATA:
+    FS: 30
+    DATASET: UBFC-rPPG
+    DO_PREPROCESS: true
+    DATA_FORMAT: NDCHW
+    DATA_PATH: ./data/raw/UBFC-rPPG/DATASET_2
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/deepphys
+    EXP_DATA_NAME: UBFC-rPPG_DeepPhys_within_622
+    BEGIN: 0.0
+    END: 0.6
+    PREPROCESS:
+      DATA_TYPE:
+      - DiffNormalized
+      - Standardized
+      DATA_AUG:
+      - None
+      LABEL_TYPE: DiffNormalized
+      DO_CHUNK: true
+      CHUNK_LENGTH: 180
+      CROP_FACE:
+        DO_CROP_FACE: true
+        BACKEND: HC
+        USE_LARGE_FACE_BOX: true
+        LARGE_BOX_COEF: 1.5
+        DETECTION:
+          DO_DYNAMIC_DETECTION: false
+          DYNAMIC_DETECTION_FREQUENCY: 30
+          USE_MEDIAN_FACE_BOX: false
+      RESIZE:
+        H: 72
+        W: 72
+VALID:
+  DATA:
+    FS: 30
+    DATASET: UBFC-rPPG
+    DO_PREPROCESS: true
+    DATA_FORMAT: NDCHW
+    DATA_PATH: ./data/raw/UBFC-rPPG/DATASET_2
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/deepphys
+    EXP_DATA_NAME: UBFC-rPPG_DeepPhys_within_622
+    BEGIN: 0.6
+    END: 0.8
+    PREPROCESS:
+      DATA_TYPE:
+      - DiffNormalized
+      - Standardized
+      DATA_AUG:
+      - None
+      LABEL_TYPE: DiffNormalized
+      DO_CHUNK: true
+      CHUNK_LENGTH: 180
+      CROP_FACE:
+        DO_CROP_FACE: true
+        BACKEND: HC
+        USE_LARGE_FACE_BOX: true
+        LARGE_BOX_COEF: 1.5
+        DETECTION:
+          DO_DYNAMIC_DETECTION: false
+          DYNAMIC_DETECTION_FREQUENCY: 30
+          USE_MEDIAN_FACE_BOX: false
+      RESIZE:
+        H: 72
+        W: 72
+TEST:
+  METRICS:
+  - MAE
+  - RMSE
+  - MAPE
+  - Pearson
+  USE_LAST_EPOCH: false
+  DATA:
+    FS: 30
+    DATASET: UBFC-rPPG
+    DO_PREPROCESS: true
+    DATA_FORMAT: NDCHW
+    DATA_PATH: ./data/raw/UBFC-rPPG/DATASET_2
+    CACHED_PATH: ./data/cache/rppg-toolbox/ubfc/deepphys
+    EXP_DATA_NAME: UBFC-rPPG_DeepPhys_within_622
+    BEGIN: 0.8
+    END: 1.0
+    PREPROCESS:
+      DATA_TYPE:
+      - DiffNormalized
+      - Standardized
+      DATA_AUG:
+      - None
+      LABEL_TYPE: DiffNormalized
+      DO_CHUNK: true
+      CHUNK_LENGTH: 180
+      CROP_FACE:
+        DO_CROP_FACE: true
+        BACKEND: HC
+        USE_LARGE_FACE_BOX: true
+        LARGE_BOX_COEF: 1.5
+        DETECTION:
+          DO_DYNAMIC_DETECTION: false
+          DYNAMIC_DETECTION_FREQUENCY: 30
+          USE_MEDIAN_FACE_BOX: false
+      RESIZE:
+        H: 72
+        W: 72
+DEVICE: cpu
+NUM_OF_GPU_TRAIN: 1
+LOG:
+  PATH: ./outputs/toolbox/ubfc/DeepPhys
+MODEL:
+  DROP_RATE: 0.2
+  NAME: DeepPhys
+INFERENCE:
+  BATCH_SIZE: 4
+  EVALUATION_METHOD: FFT
+  EVALUATION_WINDOW:
+    USE_SMALLER_WINDOW: false
+    WINDOW_SIZE: 10
+  MODEL_PATH: ''
+NUM_WORKERS: 0

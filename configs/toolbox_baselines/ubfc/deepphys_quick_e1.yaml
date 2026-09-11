@@ -1,0 +1,6 @@
+BASE:
+- deepphys_cpu_shared_cache.yaml
+TRAIN:
+  EPOCHS: 1
+  MODEL_FILE_NAME: ubfc_ubfc_ubfc_DeepPhysQuickE1
+  PLOT_LOSSES_AND_LR: false

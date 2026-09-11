@@ -1,0 +1,11 @@
+{
+  "MAE": 3.02734375,
+  "RMSE": 5.149920653685629,
+  "MAPE": 3.1669283097854524,
+  "Pearson": 0.9000011205369461,
+  "n_windows": 9,
+  "evaluation_method": "rPPG-Toolbox whole-video FFT",
+  "label_type": "DiffNormalized",
+  "fs": 30,
+  "source_prediction_pickle": "outputs/toolbox/ubfc/TSCAN/UBFC-rPPG_TSCAN_within_622/saved_test_outputs/ubfc_ubfc_ubfc_TSCAN_Epoch16_UBFC-rPPG_outputs.pickle"
+}

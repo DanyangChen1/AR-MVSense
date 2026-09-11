@@ -1,0 +1,12 @@
+{
+  "paper_settings_disclosed": false,
+  "interpretation": "Controlled inferred settings; not claimed as the authors' undisclosed recipe.",
+  "source_checkpoint": "outputs/ubfc/light_rppgvit/trials/physical_batch4/best.pt",
+  "reparameterization": {
+    "verified": true,
+    "max_abs_error": 1.9073486328125e-06,
+    "training_parameters": 699715,
+    "deploy_parameters": 696838
+  },
+  "status": "partial"
+}

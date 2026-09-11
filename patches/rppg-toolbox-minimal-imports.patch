@@ -1,0 +1,92 @@
+--- a/dataset/data_loader/__init__.py
++++ b/dataset/data_loader/__init__.py
+@@
+ import dataset.data_loader.BaseLoader
+-import dataset.data_loader.COHFACELoader
+ import dataset.data_loader.UBFCrPPGLoader
+-import dataset.data_loader.PURELoader
+-import dataset.data_loader.iBVPLoader
+-import dataset.data_loader.SCAMPSLoader
+ import dataset.data_loader.MMPDLoader
+-import dataset.data_loader.BP4DPlusLoader
+-import dataset.data_loader.BP4DPlusBigSmallLoader
+-import dataset.data_loader.UBFCPHYSLoader
+-import dataset.data_loader.PhysDriveLoader
+-import dataset.data_loader.LADHLoader
+-import dataset.data_loader.SUMSLoader
+--- a/neural_methods/trainer/__init__.py
++++ b/neural_methods/trainer/__init__.py
+@@
+ import neural_methods.trainer.BaseTrainer
+ import neural_methods.trainer.PhysnetTrainer
+-import neural_methods.trainer.iBVPNetTrainer
+ import neural_methods.trainer.TscanTrainer
+ import neural_methods.trainer.DeepPhysTrainer
+ import neural_methods.trainer.EfficientPhysTrainer
+-import neural_methods.trainer.BigSmallTrainer
+ import neural_methods.trainer.PhysFormerTrainer
+-import neural_methods.trainer.PhysMambaTrainer
+-import neural_methods.trainer.RhythmFormerTrainer
+-import neural_methods.trainer.FactorizePhysTrainer
+--- a/dataset/data_loader/BaseLoader.py
++++ b/dataset/data_loader/BaseLoader.py
+@@
+-from unsupervised_methods.methods import POS_WANG
+-from unsupervised_methods import utils
+ import math
+@@
+     def generate_pos_psuedo_labels(self, frames, fs=30):
+@@
+-        # generate POS PPG signal
++        # Lazy import keeps supervised-only runs independent of optional
++        # scikit-image/scikit-learn baseline dependencies.
++        from unsupervised_methods.methods import POS_WANG
++        from unsupervised_methods import utils
++
++        # generate POS PPG signal
+--- a/main.py
++++ b/main.py
+@@
+-from unsupervised_methods.unsupervised_predictor import unsupervised_predict
+@@
+def unsupervised_method_inference(config, data_loader):
++    from unsupervised_methods.unsupervised_predictor import unsupervised_predict
++
+--- a/config.py
++++ b/config.py
+@@
+ _C.DEVICE = "cuda:0"
+ _C.NUM_OF_GPU_TRAIN = 1
++_C.NUM_WORKERS = 16
+--- a/main.py
++++ b/main.py
+@@
+-                num_workers=16,
++                num_workers=config.NUM_WORKERS,
+@@
+-                num_workers=16,
++                num_workers=config.NUM_WORKERS,
+@@
+-                num_workers=16,
++                num_workers=config.NUM_WORKERS,
+@@
+-            num_workers=16,
++            num_workers=config.NUM_WORKERS,
+--- a/dataset/data_loader/UBFCrPPGLoader.py
++++ b/dataset/data_loader/UBFCrPPGLoader.py
+@@
+-        return dirs
++        return sorted(dirs, key=lambda item: int(item["index"][7:]))
+--- a/dataset/data_loader/MMPDLoader.py
++++ b/dataset/data_loader/MMPDLoader.py
+@@
+-            mat_dirs = os.listdir(data_dir)
++            mat_dirs = sorted(os.listdir(data_dir))
+@@
+-        return dirs
++        return sorted(dirs, key=lambda item: (item['subject'], int(item['index'])))
+--- a/dataset/data_loader/BaseLoader.py
++++ b/dataset/data_loader/BaseLoader.py
+@@
+-    def multi_process_manager(self, data_dirs, config_preprocess, multi_process_quota=8):
++    def multi_process_manager(self, data_dirs, config_preprocess, multi_process_quota=2):

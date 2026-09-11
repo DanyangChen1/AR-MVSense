@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "weights": [
+    {
+      "name": "Light-rPPGViT UBFC best",
+      "path": "weights/light_rppgvit/ubfc_best.pt",
+      "bytes": 2876483,
+      "sha256": "1e7a755bad169b28603659753a1f9fcdf0f935feebf12044dc4246bea5931320",
+      "framework": "lightrppg",
+      "config": "configs/ubfc_light_rppgvit_physical_batch4.yaml",
+      "metrics": {
+        "MAE": 0.29296875,
+        "RMSE": 0.6550980402831416,
+        "MAPE": 0.3243707546423445,
+        "Pearson": 0.9981010542190807,
+        "n_videos": 9.0,
+        "waveform_pearson": 0.6757371464587416
+      }
+    },
+    {
+      "name": "rPPGViT UBFC best",
+      "path": "weights/rppgvit/ubfc_best.pt",
+      "bytes": 4463333,
+      "sha256": "536df14b9552cddac008da565b52c98a49f52fd77d66098e7261a216ce151ad2",
+      "framework": "lightrppg",
+      "config": "configs/ubfc_rppgvit_window64_cosine_physical_batch4.yaml",
+      "metrics": {
+        "MAE": 0.09765625,
+        "RMSE": 0.29296875,
+        "MAPE": 0.1277139208173691,
+        "Pearson": 0.9997783583578335,
+        "n_videos": 9.0,
+        "waveform_pearson": 0.7213191881139428
+      }
+    },
+    {
+      "name": "TSCAN UBFC epoch 16",
+      "path": "weights/tscan/ubfc_epoch16.pth",
+      "bytes": 8924241,
+      "sha256": "26f7df31e9b312d7817b37e1955755d5cde5ed5e72b54ceaabefde470dad54d7",
+      "framework": "rppg-toolbox",
+      "config": "configs/toolbox_baselines/ubfc/tscan_release_test.yaml",
+      "metrics": {
+        "MAE": 3.02734375,
+        "RMSE": 5.149920653685629,
+        "MAPE": 3.1669283097854524,
+        "Pearson": 0.9000011205369461,
+        "n_windows": 9,
+        "evaluation_method": "rPPG-Toolbox whole-video FFT",
+        "label_type": "DiffNormalized",
+        "fs": 30,
+        "source_prediction_pickle": "outputs/toolbox/ubfc/TSCAN/UBFC-rPPG_TSCAN_within_622/saved_test_outputs/ubfc_ubfc_ubfc_TSCAN_Epoch16_UBFC-rPPG_outputs.pickle"
+      }
+    }
+  ]
+}
